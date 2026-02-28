@@ -185,25 +185,25 @@ export default function App() {
     <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY} libraries={LIBRARIES}>
       <div className="min-h-screen bg-bg flex items-start justify-center px-4 py-8 sm:py-12">
         <div className="w-full max-w-[640px]">
-          {/* ── Header ─────────────────────── */}
-          <header className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <span className="text-3xl">🚘</span>
-              <h1 className="text-2xl font-bold text-dark tracking-tight">
-                ExampleIQ
-              </h1>
-            </div>
-            <h2 className="text-xl sm:text-2xl font-semibold text-dark">
-              Let's get you on your way!
-            </h2>
-          </header>
-
           {/* ── Form ───────────────────────── */}
           <form
             onSubmit={handleSubmit}
             noValidate
             className="bg-card rounded-2xl shadow-lg border border-border/50 p-6 sm:p-8 space-y-8"
           >
+            {/* ── Header ─────────────────────── */}
+            <header className="text-center">
+              <div className="inline-flex items-center gap-2 mb-4">
+                <span className="text-3xl">🚘</span>
+                <h1 className="text-2xl font-bold text-dark tracking-tight">
+                  ExampleIQ
+                </h1>
+              </div>
+              <h2 className="text-left text-xl sm:text-2xl text-dark">
+                Let's get you on your way!
+              </h2>
+            </header>
+
             {/* Trip Type */}
             <TripTypeToggle
               value={form.tripType}
@@ -376,10 +376,6 @@ export default function App() {
               {submitting ? 'Submitting...' : 'Continue'}
             </button>
           </form>
-
-          <p className="text-center text-xs text-muted mt-6">
-            © {new Date().getFullYear()} ExampleIQ — All rights reserved.
-          </p>
         </div>
       </div>
     </LoadScript>
