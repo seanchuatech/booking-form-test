@@ -18,6 +18,7 @@ export default function PhoneInput({ value, onChange, onBlur, error }: PhoneInpu
       <PhoneInputLib
         international
         defaultCountry="US"
+        countries={['US']}
         value={value}
         onChange={handleChange}
         onBlur={onBlur}

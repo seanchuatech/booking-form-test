@@ -100,7 +100,7 @@ export default function ContactInfo({
             errors.email ? 'border-error' : 'border-border'
           }`}
         >
-          <span className="text-muted text-sm">@</span>
+          <span className="text-muted text-sm">✉️</span>
           <input
             id="email"
             type="email"
