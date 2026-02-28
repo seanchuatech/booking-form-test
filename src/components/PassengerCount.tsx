@@ -26,7 +26,7 @@ export default function PassengerCount({ value, onChange, error }: PassengerCoun
             min="1"
             value={value}
             onChange={(e) => onChange(parseInt(e.target.value, 10) || '')}
-            className="w-16 bg-transparent text-sm text-dark outline-none"
+            className="w-20 bg-transparent text-sm text-dark outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             placeholder="#"
           />
         </div>

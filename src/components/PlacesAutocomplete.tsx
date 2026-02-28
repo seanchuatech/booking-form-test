@@ -67,7 +67,7 @@ export default function PlacesAutocomplete({
               if (onChange) onChange(e.target.value);
             }}
             placeholder={placeholder}
-            className="w-full bg-transparent text-sm text-dark outline-none placeholder-muted"
+            className="w-full bg-transparent text-sm text-dark outline-none placeholder-muted truncate"
           />
         </Autocomplete>
         <span className="text-muted text-xs">▼</span>

@@ -38,7 +38,7 @@ export default function ContactInfo({
         contact information.
       </p>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* First Name */}
         <div>
           <label className="text-xs text-muted mb-1 block" htmlFor="first-name">
