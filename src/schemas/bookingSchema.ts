@@ -12,7 +12,16 @@ export const bookingSchema = z
     tripType: z.enum(['one-way', 'hourly'], {
       required_error: 'Please select a trip type',
     }),
-    pickupDate: z.string().min(1, 'Pickup date is required'),
+    pickupDate: z
+      .string()
+      .min(1, 'Pickup date is required')
+      .refine(
+        (val) => {
+          const today = new Date().toISOString().split('T')[0];
+          return val >= today;
+        },
+        { message: 'Pickup date cannot be in the past' }
+      ),
     pickupTime: z.string().min(1, 'Pickup time is required'),
     pickupLocationType: z.enum(['location', 'airport']),
     pickupLocation: locationSchema,

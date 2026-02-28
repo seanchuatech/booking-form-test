@@ -15,6 +15,8 @@ export default function DateTimeInputs({
   dateError,
   timeError,
 }: DateTimeInputsProps) {
+  const today = new Date().toISOString().split('T')[0];
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {/* Date */}
@@ -28,6 +30,7 @@ export default function DateTimeInputs({
           <input
             type="date"
             value={date}
+            min={today}
             onChange={(e) => onDateChange(e.target.value)}
             className="flex-1 bg-transparent text-sm text-dark outline-none"
             id="pickup-date"
